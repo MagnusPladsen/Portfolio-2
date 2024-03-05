@@ -1,25 +1,14 @@
-import Image from "next/image";
 import projects from "./api/projects";
+import ProjectCard from "./components/projects/ProjectCard/ProjectCard.component";
+import H1 from "./components/typography/H1/H1.component";
 
 export default function Home() {
-  console.log(projects);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold">Projects</h1>
-      <section className="flex flex-wrap justify-center">
+    <main className="pt-[80px] lg:pt-[120px] mx-auto xl:max-w-screen-xl pb-16 lg:px-6 gap-5">
+      <H1>Projects</H1>
+      <section className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3 mb-4 justify-center w-full">
         {projects.map((project) => (
-          <article key={project.id} className="m-4 p-4 border rounded-lg">
-            <h2 className="text-2xl font-bold">{project.title}</h2>
-            <p>{project.description}</p>
-            <Image src={project.image} alt={project.title} height={200} width={200} />
-            <div className="flex flex-wrap">
-              {/* {project.stacks.map((stack) => (
-                <div key={stack.id} className="m-2">
-                  <Image src={"/public/images/NorAuc.jpg"} alt={stack.name} height={200} width={200} />
-                </div>
-              ))} */}
-            </div>
-          </article>
+          <ProjectCard key={project.id} project={project} />
         ))}
       </section>
     </main>

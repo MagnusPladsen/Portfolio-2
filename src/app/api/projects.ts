@@ -94,7 +94,7 @@ const projects: Project[] = [
       "To take the skills learned over the last two years and take on an extensive project where the finished product should reflect the candidate’s general development capabilities, in addition to visual and technical skills.",
     status: "Done",
     grade: "A",
-    image: "/images/NorShop.jpeg",
+    image: "/images/Holidaze.jpeg",
     url: "https://holidaze.pladsen.dev/",
     repo: "https://github.com/MagnusPladsen/Project-Exam-2",
     stacks: [
