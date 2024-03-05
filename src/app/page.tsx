@@ -11,13 +11,13 @@ export default function Home() {
           <article key={project.id} className="m-4 p-4 border rounded-lg">
             <h2 className="text-2xl font-bold">{project.title}</h2>
             <p>{project.description}</p>
-            <Image src={project.image} alt={project.title} />
+            <Image src={project.image} alt={project.title} height={200} width={200} />
             <div className="flex flex-wrap">
-              {project.stacks.map((stack) => (
+              {/* {project.stacks.map((stack) => (
                 <div key={stack.id} className="m-2">
-                  <Image src={stack.logo} alt={stack.name} width={200} />
+                  <Image src={"/public/images/NorAuc.jpg"} alt={stack.name} height={200} width={200} />
                 </div>
-              ))}
+              ))} */}
             </div>
           </article>
         ))}

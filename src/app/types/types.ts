@@ -6,6 +6,8 @@ interface Project {
     grade: string;
     image: string;
     stacks: Stack[];
+    url: string;
+    repo: string;
 }
 
 interface Stack {
