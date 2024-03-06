@@ -57,6 +57,7 @@ function ProjectCard({ project }: { project: Project }) {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.4, type: "tween" }}
+                key={"stack"+stack.id}
                 >
                   <Link href={stack.url} key={stack.id} passHref>
                     <div className="flex items-center hover:underline underline-offset-2 gap-2 group">
